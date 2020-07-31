@@ -39,7 +39,7 @@ export class RNS3 {
     }
 
     const url = `https://s3.${options.region}.amazonaws.com/${options.bucket}/`
-    const method = "POST"
+    const method = "PUT"
     const policy = S3Policy.generate(options)
 
     return Request.create(url, method, policy)
